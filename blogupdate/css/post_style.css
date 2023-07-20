@@ -1,0 +1,72 @@
+/*divide the css doc into smaller files to keep work clean*/
+@import url("./nav.css");
+
+@import url("./bio_img.css");
+
+/*must set the body of the page in order to have the 
+container fill the screen*/
+body {
+    height: 100vh;
+    margin:0;
+    padding:0;
+    background-color: bisque;
+    
+}
+.layout{
+    /* takes up the amount of it's parent setting it to 100%*/
+    height: 100%;
+    display:grid;
+    grid-template-areas: 
+    "sb mn"
+    "sb f";
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px ;
+    
+}
+
+.main{
+    
+    grid-area:mn;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-self: center;
+    list-style: none;
+}
+.profile_img{
+  border-radius: 100%;
+  /*add space between elements */
+  margin-bottom: 40px;
+}
+
+.bio{
+    font:24px;
+    text-align: center;
+    line-height: 40px;
+    max-width: 768px;
+    margin-bottom: 40px;
+}
+
+.sidebar{
+    grid-area:sb;
+    background-color: rgb(255,250,50);
+    padding:20px;
+    
+
+}
+
+
+.footer{
+    margin-top:50px;
+    grid-area: f;
+    justify-self:center;
+}
+
+.ulclass>*{
+    list-style: none;
+    
+}
+.ulclass a{
+    text-decoration: none;
+}
+
